@@ -5,19 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <h1>Totally Trivial Trivia</h1>
 
-    <button type="button" onclick="alert('Hello world!')">Start</button>
+    <div id="show-number"></div>
+    <div id="message"></div>
 
-    <form>
-        <h2>What was Mickey Mouse's Gender?</h2>
-            <input type="radio" name="gender" value="male"> Male
-            <input type="radio" name="gender" value="female"> Female
-            <input type="radio" name="gender" value="other"> Other  
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
 
-        <h2>What engine does Haas F1 use?</h2>
+    <script>
+        var number = 10;
+        var intervalId;
+
+        $("#start").on("click", start);
+        $("#stop").on("click", stop);
+
+        function run() {
+            clearInterval(intervalId);
+            intervalId = setInterval(decrement, 1000);
+        }
+
+        function decrement() {
+            number--;
+
+            $("#show-number").html("<h2>" + number + "</h2>");
+
+            if (number === 0) {
+                stop();
+            }
+        }
+
+        function stop() {
+            clearInterval(intervalId);
+
+            $("#show-number").html("<h2>" + number + "</h2>");
+            $("#message").html("out of time");
+        }
+
+        function start() {
+            run();
+        }
+
+    </script>
+
+
+
+        
+
+        <!-- <h2>What engine does Haas F1 use?</h2>
             <input type="radio" name="engine1" value="ford"> Ford
             <input type="radio" name="engine1" value="renault"> Renault
             <input type="radio" name="engine1" value="ferrari"> Ferrari 
@@ -38,7 +76,7 @@
             <input type="radio" name="killed" value="roland"> Roland Ratzenberger
             <input type="radio" name="killed" value="ayrton"> Ayrton Senna
             <input type="radio" name="killed" value="jules"> Jules Bianchi
-  </form>      
+  </form>       -->
       
 </body>
 </html>
