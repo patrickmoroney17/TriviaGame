@@ -15,7 +15,7 @@
     </div>
         
     <div id="timeRemaining">
-        Time Remaining:<id="timer">
+        <h2>Time Remaining:<id="timer"></h2>
     </div>
 
     <div class="triviaQuestions text-center">
@@ -49,7 +49,7 @@
 
     </div>
 
-    <div id="results">
+    <div id="results text-center">
             <p id="summary">All Done!</p> 
             <p id="correctAnswerCount">Correct Answers:</p>
             <p id="incorrectAnswerCount"></p>
@@ -84,9 +84,9 @@
 
             function decrement() {
                 number--;
-                $("#timeRemaining").html("<h2> " + number + " seconds</h2>");
+                $("#timeRemaining").html("<h2>Time remaining: " + number + " seconds</h2>");
                 if (number ===1) {
-                    $("#timeRemaining").html("<h2> " + number + " second</h2>");
+                    $("#timeRemaining").html("<h2>Time remaining: " + number + " second</h2>");
                 }
                 if (number === 0) {
                     // done();
@@ -103,6 +103,11 @@
 
             function displaySummary(){
                 $("#results").show();
+                unAnswered = (20-(correctAnswers + incorrectAnswers));
+                correctAnswers = $("input[value=correct]:checked").length;
+                incorrectAnswers = $("input[value=wrong]:checked").length;
+                unAnswered = (20 - (correctAnswers + incorrectAnswers));
+                $('#unAnswered').text("UnAnswered:" + " " + unAnswered); 
             }
 
             $("#gameStart").on("click", function() {
