@@ -10,73 +10,52 @@
 
 <body>
 
-    <div id="show-number"></div>
-    <div id="message"></div>
-
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-
-    <script>
-        var number = 10;
-        var intervalId;
-
-        $("#start").on("click", start);
-        $("#stop").on("click", stop);
-
-        function run() {
-            clearInterval(intervalId);
-            intervalId = setInterval(decrement, 1000);
-        }
-
-        function decrement() {
-            number--;
-
-            $("#show-number").html("<h2>" + number + "</h2>");
-
-            if (number === 0) {
-                stop();
-            }
-        }
-
-        function stop() {
-            clearInterval(intervalId);
-
-            $("#show-number").html("<h2>" + number + "</h2>");
-            $("#message").html("out of time");
-        }
-
-        function start() {
-            run();
-        }
-
-    </script>
-
-
-
+    <div id="startingPoint">
+        <button id="gameStart">Start</button>
+    </div>
         
+    <div id="timeRemaining">
+        Time Remaining:<span id="timer"></span>
+    </div>
 
-        <!-- <h2>What engine does Haas F1 use?</h2>
-            <input type="radio" name="engine1" value="ford"> Ford
-            <input type="radio" name="engine1" value="renault"> Renault
-            <input type="radio" name="engine1" value="ferrari"> Ferrari 
-            <input type="radio" name="engine1" value="honda"> Honda  
+    <div id="triviaQuestins text-center">
+        <form>
+            <h2>What engine does Haas F1 use?</h2>
+                <input type="radio" value="incorrect"> Ford
+                <input type="radio" value="incorrect"> Renault
+                <input type="radio" value="correct"> Ferrari 
+                <input type="radio" value="incorrect"> Honda
 
-        <h2>What engine does Red Bull F1 use?</h2>
-            <input type="radio" name="engine2" value="ford"> Ford
-            <input type="radio" name="engine2" value="renault"> Renault
-            <input type="radio" name="engine2" value="ferrari"> Ferrari 
-            <input type="radio" name="engine2" value="honda"> Honda  
+            <h2>What engine does Red Bull F1 use?</h2>
+                <input type="radio" value="incorrect"> Ford
+                <input type="radio" value="incorrect"> Renault
+                <input type="radio" value="incorrect"> Ferrari 
+                <input type="radio" value="correct"> Honda  
+        
+            <h2>Who currently does not drive for Ferrari?</h2>
+                <input type="radio" value="incorrect"> Charles LeClerc
+                <input type="radio" value="correct"> Mario Andretti
+                <input type="radio" value="incorrect"> Sebastian Vettel
     
-        <h2>Who currently does not drive for Ferrari?</h2>
-            <input type="radio" name="ferrariDriver" value="leclerc"> Charles LeClerc
-            <input type="radio" name="ferrariDriver" value="andretti"> Mario Andretti
-            <input type="radio" name="ferrariDriver" value="vettel"> Sebastian Vettel
+            <h2>What driver was not killed at the famous 1994 GP of Imola?</h2>
+                <input type="radio" value="correct"> Roland Ratzenberger
+                <input type="radio" value="correct"> Ayrton Senna
+                <input type="radio" value="incorrect"> Jules Bianchi
 
-        <h2>What driver was not killed at the famous 1994 GP of Imola?</h2>
-            <input type="radio" name="killed" value="roland"> Roland Ratzenberger
-            <input type="radio" name="killed" value="ayrton"> Ayrton Senna
-            <input type="radio" name="killed" value="jules"> Jules Bianchi
-  </form>       -->
+            <button id="done">Done</button>
+
+        </form>
+
+    </div>
+
+    <div id="results">
+            <p id="summary">All Done!</p> 
+            <p id="correctAnswerCount">Correct Answers:</p>
+            <p id="incorrectAnswerCount"></p>
+            <p id="unAnswered"></p>
+    </div>
+
+
       
 </body>
 </html>
