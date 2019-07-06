@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trivia Game</title>
+    <title>Mule 3</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -15,10 +15,10 @@
     </div>
         
     <div id="timeRemaining">
-        Time Remaining:<span id="timer"></span>
+        Time Remaining:<id="timer">
     </div>
 
-    <div id="triviaQuestins text-center">
+    <div class="triviaQuestions text-center">
         <form>
             <h2>What engine does Haas F1 use?</h2>
                 <input type="radio" value="incorrect"> Ford
@@ -41,10 +41,11 @@
                 <input type="radio" value="correct"> Roland Ratzenberger
                 <input type="radio" value="correct"> Ayrton Senna
                 <input type="radio" value="incorrect"> Jules Bianchi
-
-            <button id="done">Done</button>
-
         </form>
+
+        <div>
+            <button id="checkAnswers">Done</button>
+        </div>
 
     </div>
 
@@ -56,6 +57,50 @@
     </div>
 
 
+    <script>
+
+        $(document).ready(function() {
+
+            $("#timeRemaining").hide();
+            $(".triviaQuestions").hide();
+            $("#results").hide();
+
+            correctAnswers = 0;
+            incorrectAnswers = 0;
+            unAnswered = 0;
+            var number = 10;
+            var intervalId;
+
+            function showQuestions() {
+                $("#timeRemaining").show();
+                $(".triviaQuestions").show();
+                $("#checkanswers").show();
+            }
+
+            function hide(){
+                $("#timeRemaining").hide();
+                $(".triviaQuestions").hide();
+                $("#results").hide();
+            }
+
+            function displaySummary(){
+                $("#results").show();
+            }
+
+            $("#gameStart").on("click", function() {
+                $("#startingPoint").hide();
+                showQuestions();
+                // run();
+            }); 
+
+            $("#checkAnswers").on("click", function() {
+                hide();
+                displaySummary();
+            });
+
+        });
+
+    </script>
       
 </body>
 </html>
