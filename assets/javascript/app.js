@@ -24,7 +24,7 @@ $(document).ready(function() {
     function decrement() {
         number--;
         $("#timeRemaining").html("<h2>Time remaining: " + number + " seconds</h2>");
-        if (number ===1) {
+        if (number === 1) {
             $("#timeRemaining").html("<h2>Time remaining: " + number + " second</h2>");
         }
         if (number === 0) {
@@ -36,7 +36,6 @@ $(document).ready(function() {
     function hide() {
         $("#timeRemaining").hide();
         $(".triviaQuestions").hide();
-        // $(".results").show();
     }
 
     function displaySummary() {
@@ -58,8 +57,8 @@ $(document).ready(function() {
     });
 
     $("input[type=radio]").on ("change", function() {
-        correctAnswers = $("input[value=correct]:checked").length;
-        incorrectAnswers = $("input[value=incorrect]:checked").length;
+        correctAnswers = $("input[value = correct]:checked").length;
+        incorrectAnswers = $("input[value = incorrect]:checked").length;
         unAnswered = (4 - (correctAnswers + incorrectAnswers));
     });
 
