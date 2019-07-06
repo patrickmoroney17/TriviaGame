@@ -33,18 +33,17 @@ $(document).ready(function() {
         }
     }
 
-    function hide(){
+    function hide() {
         $("#timeRemaining").hide();
         $(".triviaQuestions").hide();
-        $(".results").show();
+        // $(".results").show();
     }
 
-    function displaySummary(){
-        unAnswered = (20-(correctAnswers + incorrectAnswers));
-        correctAnswers = $("input[value=correct]:checked").length;
-        incorrectAnswers = $("input[value=wrong]:checked").length;
-        unAnswered = (20 - (correctAnswers + incorrectAnswers));
-        $('#unAnswered').text("Unanswered questions:" + " " + unAnswered); 
+    function displaySummary() {
+        $(".results").show();
+        $("#correctAnswerCount").text("Correct Answers: " + correctAnswers); 
+        $("#incorrectAnswerCount").text("Incorrect Answers: " + incorrectAnswers); 
+        $("#unAnsweredCount").text("Unanswered: " + unAnswered); 
     }
 
     $("#gameStart").on("click", function() {
@@ -56,6 +55,12 @@ $(document).ready(function() {
     $("#checkAnswers").on("click", function() {
         hide();
         displaySummary();
+    });
+
+    $("input[type=radio]").on ("change", function() {
+        correctAnswers = $("input[value=correct]:checked").length;
+        incorrectAnswers = $("input[value=incorrect]:checked").length;
+        unAnswered = (4 - (correctAnswers + incorrectAnswers));
     });
 
 });
