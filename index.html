@@ -49,7 +49,7 @@
 
     </div>
 
-    <div id="results text-center">
+    <div class="results text-center">
             <p id="summary">All Done!</p> 
             <p id="correctAnswerCount">Correct Answers:</p>
             <p id="incorrectAnswerCount"></p>
@@ -57,73 +57,7 @@
     </div>
 
 
-    <script>
-
-        $(document).ready(function() {
-
-            $("#timeRemaining").hide();
-            $(".triviaQuestions").hide();
-            $("#results").hide();
-
-            correctAnswers = 0;
-            incorrectAnswers = 0;
-            unAnswered = 0;
-            var number = 10;
-            var intervalId;
-
-            function showQuestions() {
-                $("#timeRemaining").show();
-                $(".triviaQuestions").show();
-                $("#checkanswers").show();
-            }
-
-            function run() {
-                clearInterval(intervalId);
-                intervalId = setInterval(decrement, 1000);
-            }
-
-            function decrement() {
-                number--;
-                $("#timeRemaining").html("<h2>Time remaining: " + number + " seconds</h2>");
-                if (number ===1) {
-                    $("#timeRemaining").html("<h2>Time remaining: " + number + " second</h2>");
-                }
-                if (number === 0) {
-                    // done();
-                    hide();
-                    displaySummary();
-                }
-            }
-
-            function hide(){
-                $("#timeRemaining").hide();
-                $(".triviaQuestions").hide();
-                $("#results").hide();
-            }
-
-            function displaySummary(){
-                $("#results").show();
-                unAnswered = (20-(correctAnswers + incorrectAnswers));
-                correctAnswers = $("input[value=correct]:checked").length;
-                incorrectAnswers = $("input[value=wrong]:checked").length;
-                unAnswered = (20 - (correctAnswers + incorrectAnswers));
-                $('#unAnswered').text("UnAnswered:" + " " + unAnswered); 
-            }
-
-            $("#gameStart").on("click", function() {
-                $("#startingPoint").hide();
-                showQuestions();
-                run();
-            }); 
-
-            $("#checkAnswers").on("click", function() {
-                hide();
-                displaySummary();
-            });
-
-        });
-
-    </script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
       
 </body>
 </html>
