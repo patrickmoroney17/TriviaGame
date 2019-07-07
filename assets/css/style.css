@@ -6,7 +6,7 @@ body {
 header {
     background-color:red;
     color: white;
-    padding: 30px 10px 30px 40px;
+    padding: 20px 10px 10px 10px;
     text-align: center;
     font-size: 36px;
     margin: 0 auto;
@@ -21,7 +21,7 @@ header {
 }
 
 #gameStart {
-    font-size: 36px;
+    font-size: 34px;
 }
 
 #back-img {
@@ -47,7 +47,7 @@ header {
 }
 
 #checkAnswers {
-    font-size: 36px; 
+    font-size: 34px; 
 }
 
 #resultsBox {
