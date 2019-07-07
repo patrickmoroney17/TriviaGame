@@ -4,25 +4,28 @@ body {
 }
 
 header {
-    border: thin solid black;
     background-color:red;
     color: white;
-    /* padding: 30px 10px 30px 40px; */
+    padding: 30px 10px 30px 40px;
     text-align: center;
     font-size: 36px;
     margin: 0 auto;
-    background-image: url(assets/images/f1_logo.svg);
-    background-repeat: no-repeat;
-    background-position: top left;
 }
 
 #startingPoint {
     border: thin solid black;
     padding: 30px 10px 30px 40px;
     text-align: center; 
-    margin: 50px auto; 
+    margin: 0px auto; 
     background-color: green;
     width: 400px;
+}
+
+#back-img {
+    height: 600px;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 900px 560px;
 }
 
 #timeRemaining {
@@ -37,13 +40,10 @@ header {
 }
 
 #resultsBox {
-    border: thin solid black;
-    /* padding: 30px 10px 30px 40px; */
     text-align: center; 
     font-size: 36px;
     margin: 50px auto;
-    width: 450px;
-}
+    
 
 .h2 {
     border: thin solid black;

@@ -7,6 +7,7 @@
     <title>Trivia Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -15,11 +16,12 @@
         <p>Totally Trivial F1 Trivia</p>
     </header>
 
-
-    <div id="startingPoint">
-        <button id="gameStart" style="font-size: 150%;">Start</button>
+    <div id="back-img">
+        <div id="startingPoint">
+            <button id="gameStart" style="font-size: 150%;">Start</button>
+        </div>
     </div>
-        
+
     <div id="timeRemaining">
         <h2>Time Remaining:<id="timer"></h2>
     </div>
@@ -93,15 +95,38 @@
         <div id="doneBox">
             <button id="checkAnswers" style="font-size: 150%;">Done</button>
         </div>
-
+    
     </div>
 
-    <div class="results" id="resultsBox">
+    <div class="container results" id="resultsBox">
+        <div class="row">
+
+            <div class="col-sm-3">
+                <img src="assets/images/checkered-flags.jpg" style="height: 200px; width: 200px;"> 
+            </div>
+
+            <div class="col-sm-6">
+                <p id="summary">All Done!</p> 
+                <p id="correctAnswerCount">Correct Answers:</p>
+                <p id="incorrectAnswerCount"></p>
+                <p id="unAnsweredCount"></p>
+            </div>
+
+            <div class="col-sm-3">
+                <img src="assets/images/checkered-flags.jpg" style="height: 200px; width: 200px;"> 
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="results" id="resultsBox">
             <p id="summary">All Done!</p> 
             <p id="correctAnswerCount">Correct Answers:</p>
             <p id="incorrectAnswerCount"></p>
             <p id="unAnsweredCount"></p>
-    </div>
+    </div> -->
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
       
