@@ -20,12 +20,12 @@ header {
     border: thin solid black;
     padding: 30px 10px 30px 40px;
     text-align: center; 
-    margin-top: 20px; 
+    margin: 50px auto; 
     background-color: green;
+    width: 400px;
 }
 
 #timeRemaining {
-    border: thin solid black;
     text-align: center; 
 }
 
@@ -38,10 +38,11 @@ header {
 
 #resultsBox {
     border: thin solid black;
-    padding: 30px 10px 30px 40px;
+    /* padding: 30px 10px 30px 40px; */
     text-align: center; 
-    margin-top: 30px;   
-    font-size: 130%; 
+    font-size: 36px;
+    margin: 50px auto;
+    width: 450px;
 }
 
 .h2 {
