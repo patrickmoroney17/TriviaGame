@@ -47,6 +47,7 @@ $(document).ready(function() {
 
     $("#gameStart").on("click", function() {
         $("#startingPoint").hide();
+        $("#back-img").hide();
         showQuestions();
         run();
     }); 
