@@ -1,0 +1,59 @@
+body {
+    font-family: Verdana, Geneva, Ariel, sans-serif;
+    width:  900px;
+}
+
+header {
+    border: thin solid black;
+    background-color:red;
+    color: white;
+    /* padding: 30px 10px 30px 40px; */
+    text-align: center;
+    font-size: 36px;
+    margin: 0 auto;
+    background-image: url(assets/images/f1_logo.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+#startingPoint {
+    border: thin solid black;
+    padding: 30px 10px 30px 40px;
+    text-align: center; 
+    margin-top: 20px; 
+    background-color: green;
+}
+
+#timeRemaining {
+    border: thin solid black;
+    text-align: center; 
+}
+
+#doneBox {
+    border: thin solid black;
+    padding: 30px 10px 30px 40px;
+    text-align: center; 
+    margin-top: 30px;   
+}
+
+#resultsBox {
+    border: thin solid black;
+    padding: 30px 10px 30px 40px;
+    text-align: center; 
+    margin-top: 30px;   
+    font-size: 130%; 
+}
+
+.h2 {
+    border: thin solid black;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.questions {
+    text-align: center;
+}
+
+.answers {
+    text-align: center;   
+}

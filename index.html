@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
 
+    <header>
+        <p>Totally Trivial F1 Trivia</p>
+    </header>
+
+
     <div id="startingPoint">
-        <button id="gameStart">Start</button>
+        <button id="gameStart" style="font-size: 150%;">Start</button>
     </div>
         
     <div id="timeRemaining">
@@ -20,61 +27,77 @@
 
     <div class="triviaQuestions">
         <form>
-            <h2>What circuit currently hosts the Belgium Grand Prix?</h2>
-                <input type="radio" value="incorrect"> Nivelles-Baulers
-                <input type="radio" value="correct"> Circuit de Spa-Francorchamps 
-                <input type="radio" value="incorrect"> Reims-Gueux
-                <input type="radio" value="incorrect"> Circuit Zolder
+            <h2 class="questions">What circuit currently hosts the Belgium Grand Prix?</h2>
+                <div class="answers">
+                    <input type="radio" value="incorrect"> Nivelles-Baulers
+                    <input type="radio" value="correct"> Circuit de Spa-Francorchamps 
+                    <input type="radio" value="incorrect"> Reims-Gueux
+                    <input type="radio" value="incorrect"> Circuit Zolder
+                </div>
                 
-            <h2>Who was the last French F1 driver to win for the Renault factory team?</h2>
-                <input type="radio" value="incorrect"> Jean-Pierre Jabouille 
-                <input type="radio" value="correct"> Alain Prost  
-                <input type="radio" value="incorrect"> Patrick Tambay 
-                <input type="radio" value="incorrect"> René Arnoux
+            <h2 class="questions">Who was the last French F1 driver to win for the Équipe Renault?</h2>
+                <div class="answers">   
+                    <input type="radio" value="incorrect"> Jean-Pierre Jabouille 
+                    <input type="radio" value="correct"> Alain Prost  
+                    <input type="radio" value="incorrect"> Patrick Tambay 
+                    <input type="radio" value="incorrect"> René Arnoux
+                </div>
 
-            <h2>What engine does Haas F1 use?</h2>
-                <input type="radio" value="incorrect"> Ford
-                <input type="radio" value="incorrect"> Renault
-                <input type="radio" value="correct"> Ferrari 
-                <input type="radio" value="incorrect"> Honda
+            <h2 class="questions">What engine does Haas F1 use?</h2>
+                <div class="answers">
+                    <input type="radio" value="incorrect"> Ford
+                    <input type="radio" value="incorrect"> Renault
+                    <input type="radio" value="correct"> Ferrari 
+                    <input type="radio" value="incorrect"> Honda
+                </div>
 
-            <h2>What engine does Red Bull F1 use?</h2>
-                <input type="radio" value="incorrect"> Coswort
-                <input type="radio" value="incorrect"> Renault
-                <input type="radio" value="incorrect"> Ferrari 
-                <input type="radio" value="correct"> Honda  
+            <h2 class="questions">What engine does Red Bull F1 use?</h2>
+                <div class="answers">
+                    <input type="radio" value="incorrect"> Coswort
+                    <input type="radio" value="incorrect"> Renault
+                    <input type="radio" value="incorrect"> Ferrari 
+                    <input type="radio" value="correct"> Honda
+                </div>  
         
-            <h2>Who currently does not drive for Ferrari?</h2>
-                <input type="radio" value="incorrect"> Charles LeClerc
-                <input type="radio" value="correct"> Kimi Räikkönen 
-                <input type="radio" value="incorrect"> Sebastian Vettel
+            <h2 class="questions">Who currently does not drive for Ferrari?</h2>
+                <div class="answers">
+                    <input type="radio" value="incorrect"> Charles LeClerc
+                    <input type="radio" value="correct"> Kimi Räikkönen 
+                    <input type="radio" value="incorrect"> Sebastian Vettel
+                </div>
     
-            <h2>What driver was not killed at the famous 1994 GP of Imola?</h2>
-                <input type="radio" value="incorrect"> Roland Ratzenberger
-                <input type="radio" value="incorrect"> Ayrton Senna
-                <input type="radio" value="correct"> Jules Bianchi
+            <h2 class="questions">What driver was not killed at the famous 1994 GP of Imola?</h2>
+                <div class="answers">
+                    <input type="radio" value="incorrect"> Roland Ratzenberger
+                    <input type="radio" value="incorrect"> Ayrton Senna
+                    <input type="radio" value="correct"> Jules Bianchi
+                </div>
 
-            <h2>Approximately how much horsepower were the 1986 1.5L F1 engines making?</h2>
-                <input type="radio" value="incorrect"> Over 1000hp
-                <input type="radio" value="incorrect"> 700hp
-                <input type="radio" value="correct"> Over 1350hp
-                <input type="radio" value="incorrect"> 500hp
+            <h2 class="questions">Approximately how much horsepower were the 1986 1.5L F1 engines making?</h2>
+                <div class="answers">
+                    <input type="radio" value="incorrect"> Over 1000hp
+                    <input type="radio" value="incorrect"> 700hp
+                    <input type="radio" value="correct"> Over 1350hp
+                    <input type="radio" value="incorrect"> 500hp
+                </div>
 
-            <h2>What 2009 team won the F1 Constructors Championship in it maiden season?</h2>
-                <input type="radio" value="correct"> Brawn
-                <input type="radio" value="incorrect"> Williams
-                <input type="radio" value="incorrect"> Wolf
-                <input type="radio" value="incorrect"> McLaren
+            <h2 class="questions">What 2009 team won the F1 Constructors Championship in it maiden season?</h2>
+                <div class="answers">
+                    <input type="radio" value="correct"> Brawn
+                    <input type="radio" value="incorrect"> Williams
+                    <input type="radio" value="incorrect"> Wolf
+                    <input type="radio" value="incorrect"> McLaren
+                </div>
 
         </form>
 
-        <div>
-            <button id="checkAnswers">Done</button>
+        <div id="doneBox">
+            <button id="checkAnswers" style="font-size: 150%;">Done</button>
         </div>
 
     </div>
 
-    <div class="results">
+    <div class="results" id="resultsBox">
             <p id="summary">All Done!</p> 
             <p id="correctAnswerCount">Correct Answers:</p>
             <p id="incorrectAnswerCount"></p>

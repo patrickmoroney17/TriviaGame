@@ -59,7 +59,7 @@ $(document).ready(function() {
     $("input[type=radio]").on ("change", function() {
         correctAnswers = $("input[value = correct]:checked").length;
         incorrectAnswers = $("input[value = incorrect]:checked").length;
-        unAnswered = (4 - (correctAnswers + incorrectAnswers));
+        unAnswered = (8 - (correctAnswers + incorrectAnswers));
     });
 
 });
