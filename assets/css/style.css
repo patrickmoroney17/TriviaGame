@@ -30,6 +30,9 @@ header {
 
 #timeRemaining {
     text-align: center; 
+    margin: 0px auto;
+    background-color: yellow;
+    width: 400px;
 }
 
 #doneBox {
@@ -43,7 +46,7 @@ header {
     text-align: center; 
     font-size: 36px;
     margin: 50px auto;
-    
+}
 
 .h2 {
     border: thin solid black;
@@ -57,4 +60,5 @@ header {
 
 .answers {
     text-align: center;   
+    padding-bottom: 30px;
 }
